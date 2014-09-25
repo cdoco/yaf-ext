@@ -1,0 +1,342 @@
+[
+    {
+        "name": "meenie/javascript-packer",
+        "version": "1.1",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/meenie/javascript-packer.git",
+            "reference": "dcab0159ae1ed9d7535c034fb8afe1e4c3495d22"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/meenie/javascript-packer/zipball/dcab0159ae1ed9d7535c034fb8afe1e4c3495d22",
+            "reference": "dcab0159ae1ed9d7535c034fb8afe1e4c3495d22",
+            "shasum": ""
+        },
+        "time": "2013-03-25 21:54:33",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "class.JavaScriptPacker.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL 2.1"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Martin",
+                "role": "Developer"
+            }
+        ],
+        "description": "Composer hosted mirror of the PHP Version of Dean Edwards' JavaScript Packer",
+        "homepage": "http://joliclic.free.fr/php/javascript-packer/en/",
+        "keywords": [
+            "javascript packer"
+        ]
+    },
+    {
+        "name": "coffeescript/coffeescript",
+        "version": "1.3.1",
+        "version_normalized": "1.3.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/alxlit/coffeescript-php.git",
+            "reference": "ef262881d3f1edcca1366f4ddf18293843370da5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/alxlit/coffeescript-php/zipball/ef262881d3f1edcca1366f4ddf18293843370da5",
+            "reference": "ef262881d3f1edcca1366f4ddf18293843370da5",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2012-08-04 14:44:51",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "CoffeeScript": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Alex Little",
+                "email": "alxlit@gmail.com",
+                "homepage": "http://alxlit.name"
+            }
+        ],
+        "description": "A port of the CoffeeScript compiler to PHP.",
+        "homepage": "http://github.com/alxlit/coffeescript-php",
+        "keywords": [
+            "JS",
+            "coffee",
+            "coffeescript",
+            "javascript"
+        ]
+    },
+    {
+        "name": "imagine/imagine",
+        "version": "v0.5.0",
+        "version_normalized": "0.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/avalanche123/Imagine.git",
+            "reference": "f64ec666baaa800edcbf237db41121a569230709"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/f64ec666baaa800edcbf237db41121a569230709",
+            "reference": "f64ec666baaa800edcbf237db41121a569230709",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2"
+        },
+        "require-dev": {
+            "sami/sami": "dev-master"
+        },
+        "suggest": {
+            "ext-gd": "to use the GD implementation",
+            "ext-gmagick": "to use the Gmagick implementation",
+            "ext-imagick": "to use the Imagick implementation"
+        },
+        "time": "2013-07-10 17:25:36",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Imagine": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bulat Shakirzyanov",
+                "email": "mallluhuct@gmail.com",
+                "homepage": "http://avalanche123.com"
+            }
+        ],
+        "description": "Image processing for PHP 5.3",
+        "homepage": "http://imagine.readthedocs.org/",
+        "keywords": [
+            "drawing",
+            "graphics",
+            "image manipulation",
+            "image processing"
+        ]
+    },
+    {
+        "name": "tedivm/jshrink",
+        "version": "v0.5.1",
+        "version_normalized": "0.5.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tedivm/JShrink.git",
+            "reference": "2d3f1a7d336ad54bdf2180732b806c768a791cbf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/tedivm/JShrink/zipball/2d3f1a7d336ad54bdf2180732b806c768a791cbf",
+            "reference": "2d3f1a7d336ad54bdf2180732b806c768a791cbf",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2012-11-26 04:48:55",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "JShrink": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Robert Hafner",
+                "email": "tedivm@tedivm.com"
+            }
+        ],
+        "description": "Javascript Minifier built in PHP",
+        "homepage": "http://github.com/tedivm/JShrink",
+        "keywords": [
+            "javascript",
+            "minifier"
+        ]
+    },
+    {
+        "name": "leafo/scssphp",
+        "version": "v0.0.7",
+        "version_normalized": "0.0.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/leafo/scssphp.git",
+            "reference": "e5a79218c349cbc03dc99004fbad938c7b82391f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/leafo/scssphp/zipball/e5a79218c349cbc03dc99004fbad938c7b82391f",
+            "reference": "e5a79218c349cbc03dc99004fbad938c7b82391f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.0"
+        },
+        "require-dev": {
+            "php": ">=5.3.0",
+            "phpunit/phpunit": "3.7.*"
+        },
+        "time": "2013-05-24 14:04:53",
+        "bin": [
+            "pscss"
+        ],
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "scss.inc.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT",
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Leaf Corcoran",
+                "email": "leafot@gmail.com",
+                "homepage": "http://leafo.net"
+            }
+        ],
+        "description": "scssphp is a compiler for SCSS written in PHP.",
+        "homepage": "http://leafo.net/scssphp/"
+    },
+    {
+        "name": "leafo/lessphp",
+        "version": "v0.3.9",
+        "version_normalized": "0.3.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/leafo/lessphp.git",
+            "reference": "a11a6141b5715162b933c405379765d817891c5d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/leafo/lessphp/zipball/a11a6141b5715162b933c405379765d817891c5d",
+            "reference": "a11a6141b5715162b933c405379765d817891c5d",
+            "shasum": ""
+        },
+        "time": "2013-03-02 16:13:31",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "lessc.inc.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT",
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Leaf Corcoran",
+                "email": "leafot@gmail.com",
+                "homepage": "http://leafo.net"
+            }
+        ],
+        "description": "lessphp is a compiler for LESS written in PHP.",
+        "homepage": "http://leafo.net/lessphp/"
+    },
+    {
+        "name": "meenie/munee",
+        "version": "1.5.20",
+        "version_normalized": "1.5.20.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/meenie/munee.git",
+            "reference": "7f25338c978a284a26eb503e91430743eb760c00"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/meenie/munee/zipball/7f25338c978a284a26eb503e91430743eb760c00",
+            "reference": "7f25338c978a284a26eb503e91430743eb760c00",
+            "shasum": ""
+        },
+        "require": {
+            "coffeescript/coffeescript": "1.3.1",
+            "imagine/imagine": "0.5.0",
+            "leafo/lessphp": "0.3.9",
+            "leafo/scssphp": "0.0.7",
+            "meenie/javascript-packer": "1.1",
+            "php": ">=5.3.2",
+            "tedivm/jshrink": "0.5.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "3.7.*"
+        },
+        "time": "2013-10-18 03:39:23",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Munee": "src/"
+            },
+            "files": [
+                "config/bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Cody Lundquist",
+                "email": "cody.lundquist@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Standalone PHP 5.3 Asset Optimisation & Manipulation - On-The-Fly Image Resizing, On-the-fly LESS, SCSS, CoffeeScript Compiling, CSS & JavaScript Combining/Minifying, and Smart Client Side and Server Side Caching",
+        "homepage": "http://mun.ee",
+        "keywords": [
+            "asset management",
+            "asset optimisation",
+            "asset optimization",
+            "cache",
+            "coffeescript",
+            "css",
+            "image manipulation",
+            "javascript",
+            "less",
+            "lessphp",
+            "php",
+            "scss",
+            "scssphp"
+        ]
+    }
+]
