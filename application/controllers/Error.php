@@ -20,6 +20,8 @@ class ErrorController extends Yaf_Controller_Abstract {
             $this->_view->trace = $error_trace;
             $this->_view->message = $error_message;
 			$this->_view->exception = $exception;
+            $this->_view->server = $_SERVER;
+            $this->_view->cookie = $_COOKIE;
         }else{     
             header('Content-Type: text/html;Charset=UTF-8');
 			//错误跳转地址

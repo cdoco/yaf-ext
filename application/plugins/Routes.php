@@ -13,12 +13,12 @@ class RoutesPlugin extends Yaf_Plugin_Abstract {
     //路由结束之后触发，此时路由一定正确完成, 否则这个事件不会触发
     public function routerShutdown(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
 
-        //判定是否请求Api模块
-        $boolean = $request->module === 'Index' && $request->controller === 'Api' ? true : false;
+        //判定是否请求Admin模块
+        $boolean = ($request->module === 'Index' && $request->controller === 'Admin') ? true : false;
 
         //修改Module Controller Action
         if($boolean){
-            $request->module = 'Api';
+            $request->module = 'Admin';
             $request->controller = ucfirst($request->action);
             $request->action = 'Index';
         }

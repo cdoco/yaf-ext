@@ -16,7 +16,8 @@ class DemoModel extends Object {
         parent::_setup();
     }
 
-    public function getInfoByUserId(){
+    public function getInfoByUserId()
+    {
 
         $this->_table = new self();
 //        $row = $this->_table->find(586);
@@ -31,7 +32,8 @@ class DemoModel extends Object {
         return $row;
     }
 
-    public function insertInfo(){
+    public function insertInfo()
+    {
 
         $this->_table = new self();
 
@@ -45,23 +47,24 @@ class DemoModel extends Object {
         return $id;
     }
 
-    public function selectInfo(){
+    public function selectInfo()
+    {
 
         $data = $this->_cache->keyword;
 
-        if(!empty($data)){
+        if(!empty($data))
+        {
             return $data;
         }
 
-        $this->_table = new self();
-        $db = $this->_table->getAdapter();
+        $select = $this->_db->select();
 
-        $select = $db->select();
-
-        $select->from('slm_users', '*')->limit(20,0)->where("user_id = 301");
+        $select->from('slm_users', '*')
+            ->limit(20,0)
+            ->where("user_id = 301");
 
         $sql = $select->__toString();
-        $result = $db->fetchAll($sql);
+        $result = $this->_db->fetchAll($sql);
 
         $this->_cache->keyword = array($result, 600);
 

@@ -21,7 +21,6 @@ class IndexController extends Controller{
         /*layout*/
         $this->_layout->meta_title = 'A Blog';
 
-
     }
 
     //FastCache
