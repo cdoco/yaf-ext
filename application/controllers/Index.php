@@ -7,11 +7,8 @@
  */
 class IndexController extends Controller{
 
-    private $_layout;
-
     public function init(){
         parent::init();
-        $this->_layout = Yaf_Registry::get('layout');
     }
 
     public function indexAction(){
