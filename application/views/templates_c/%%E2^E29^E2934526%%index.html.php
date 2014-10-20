@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2014-09-24 19:45:01
+<?php /* Smarty version 2.6.26, created on 2014-10-18 22:36:28
          compiled from demo%5Cindex.html */ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
 <?php echo '

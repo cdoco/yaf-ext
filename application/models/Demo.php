@@ -5,7 +5,7 @@
  * Date: 14-9-17
  * Time: 下午4:09
  */
-class DemoModel extends Zend_Db_Table {
+class DemoModel extends Object {
 
     private $_table;
 
@@ -46,6 +46,13 @@ class DemoModel extends Zend_Db_Table {
     }
 
     public function selectInfo(){
+
+        $data = $this->_cache->keyword;
+
+        if(!empty($data)){
+            return $data;
+        }
+
         $this->_table = new self();
         $db = $this->_table->getAdapter();
 
@@ -54,11 +61,11 @@ class DemoModel extends Zend_Db_Table {
         $select->from('slm_users', '*')->limit(20,0)->where("user_id = 301");
 
         $sql = $select->__toString();
-        echo $sql;
         $result = $db->fetchAll($sql);
-//        $result=$this->_db_handler->fetchAll("select * from slm_users limit 20,20");
 
-        return $result;
+        $this->_cache->keyword = array($result, 600);
+
+        return $this->_cache->keyword;
     }
 
 

@@ -7,17 +7,23 @@
  */
 class IndexController extends Controller{
 
+    private $_layout;
+
     public function init(){
         parent::init();
+        $this->_layout = Yaf_Registry::get('layout');
     }
 
     public function indexAction(){
-        phpQuery::newDocumentFile("http://www.chinamoney.com.cn/fe/Channel/17383");
-        $companies = pq("#latestRMBParity");
 
-        echo $companies->html();
+        $data = (new DemoModel())->selectInfo();
 
-        die();
+        var_dump($data);
+
+        $this->_view->page = "+++++++++++++";
+        /*layout*/
+        $this->_layout->meta_title = 'A Blog';
+
 
     }
 

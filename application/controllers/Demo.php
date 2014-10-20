@@ -12,7 +12,7 @@ class DemoController extends Controller{
 
     public function indexAction(){
 
-        $this->_request->getFiles("uploadify");
+//        $this->_request->getFiles("uploadify");
 
     }
 }
