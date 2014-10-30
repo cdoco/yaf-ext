@@ -5,6 +5,7 @@
  * Date: 14-9-25
  * Time: 下午2:09
  */
+
 class IndexController extends Controller{
 
     public function init(){
@@ -15,11 +16,14 @@ class IndexController extends Controller{
 
         $data = (new DemoModel())->selectInfo();
 
-        var_dump($data);
+        echo Payment_AliPay::ERR_ANT_VERIFY_FAILED;
+
+//        var_dump($data);
 
         $this->_view->page = "+++++++++++++";
         /*layout*/
         $this->_layout->meta_title = 'A Blog';
+
 
     }
 

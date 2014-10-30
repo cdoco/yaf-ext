@@ -68,7 +68,6 @@ class Pagination {
         if($isSearchIpt)
         {
             $ret_string .= '　第 <input type="text" id="searchNum" /> 页';
-            $url_str =
             $ret_string .= ' <input type="button" class="page-btn cp" value="确定" onClick="location.href= \'' .$url .'\'.replace(\'%d\',$(\'#searchNum\').val());" />';
         }
         return $ret_string . '</div></div>';
