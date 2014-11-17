@@ -6,6 +6,8 @@
  * Time: 上午10:50
  */
 
+use \Yaf\Loader;
+
 class CommonController extends Controller{
 
     public function init(){}
@@ -15,7 +17,7 @@ class CommonController extends Controller{
         // Define webroot
         define('WEBROOT', APPLICATION_PATH ."/public");
         // Include munee.phar
-        Yaf_Loader::import("Munee/autoload.php");
+        Loader::import("Munee/autoload.php");
         //Error
         ob_clean();
         // Echo out the response

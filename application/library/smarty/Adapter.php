@@ -7,9 +7,11 @@
  * @version $Id$ 
 */
 
+use \Yaf\View_Interface;
+
 require "Smarty.class.php";
 
-class Smarty_Adapter implements Yaf_View_Interface
+class Smarty_Adapter implements View_Interface
 {
     /**
      * Smarty object
@@ -91,7 +93,7 @@ class Smarty_Adapter implements Yaf_View_Interface
      */
     public function setBasePath($path, $prefix = 'Zend_View')
     {
-        return $this->setScriptPath($path);
+        $this->setScriptPath($path);
     }
  
     /**
@@ -103,7 +105,7 @@ class Smarty_Adapter implements Yaf_View_Interface
      */
     public function addBasePath($path, $prefix = 'Zend_View')
     {
-        return $this->setScriptPath($path);
+        $this->setScriptPath($path);
     }
  
     /**

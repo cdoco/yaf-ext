@@ -8,5 +8,16 @@
 
 class IndexModel extends Object{
 
+    public $timestamps = false;
+
+    protected $table = 'users';
+
+    protected $primaryKey = 'user_id';
+
+    public function getUserInfo(){
+
+        var_dump(DB::table("users")->count());
+
+    }
 
 }

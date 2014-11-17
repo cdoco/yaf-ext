@@ -14,15 +14,21 @@ class IndexController extends Controller{
 
     public function indexAction(){
 
-        $data = (new DemoModel())->selectInfo();
+//        $data = (new DemoModel())->selectInfo();
 
-        echo Payment_AliPay::ERR_ANT_VERIFY_FAILED;
+//        echo Payment_AliPay::ERR_ANT_VERIFY_FAILED;
 
 //        var_dump($data);
 
-        $this->_view->page = "+++++++++++++";
+//        var_dump(IndexModel::find(155)->toArray());
+
+        (new IndexModel)->getUserInfo();
+
+//        $this->_view->page = "+++++++++++++";
         /*layout*/
+
         $this->_layout->meta_title = 'A Blog';
+
 
 
     }
@@ -38,6 +44,15 @@ class IndexController extends Controller{
         $cache->keyword = array("something here++++++++++++++++_________", 600);
         var_dump($cache->get("31lh9kj9cs3627fauu90njuj26"));
         var_dump($cache->keyword);
+
+
+        $excel = new CreateExcel();
+
+        $excel->setHeader('高子航' . date('Y年m月d日 H:i:s', time()));
+        $excel->setTitle(array( '高子航'));
+
+        $excel->setData(array());
+        $excel->echoExcel('show_' . date('Y_m_d_H_i_s', time()));
 
         die();
     }

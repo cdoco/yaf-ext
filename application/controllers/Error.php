@@ -1,10 +1,14 @@
 <?php
-class ErrorController extends Yaf_Controller_Abstract {
+
+use \Yaf\Controller_Abstract;
+use \Yaf\Application;
+
+class ErrorController extends Controller_Abstract {
 
     private $_config;
 
     public function init(){
-        $this->_config = Yaf_Application::app()->getConfig();
+        $this->_config = Application::app()->getConfig();
     }
 
     public function errorAction($exception) {

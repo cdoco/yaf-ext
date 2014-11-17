@@ -1,5 +1,11 @@
 <?php
-class LayoutPlugin extends Yaf_Plugin_Abstract {
+
+use \Yaf\Plugin_Abstract;
+use \Yaf\Request_Abstract;
+use \Yaf\Response_Abstract;
+use \Yaf\Registry;
+
+class LayoutPlugin extends Plugin_Abstract {
 
     private $_layoutDir;
     private $_layoutFile;
@@ -14,15 +20,15 @@ class LayoutPlugin extends Yaf_Plugin_Abstract {
         $this->_layoutVars[$name] = $value;
     }
 
-    public function dispatchLoopShutdown ( Yaf_Request_Abstract $request , Yaf_Response_Abstract $response ){
+    public function dispatchLoopShutdown ( Request_Abstract $request , Response_Abstract $response ){
 
     }
 
-    public function dispatchLoopStartup ( Yaf_Request_Abstract $request , Yaf_Response_Abstract $response ){
+    public function dispatchLoopStartup ( Request_Abstract $request , Response_Abstract $response ){
 
     }
 
-    public function postDispatch ( Yaf_Request_Abstract $request , Yaf_Response_Abstract $response ){
+    public function postDispatch ( Request_Abstract $request , Response_Abstract $response ){
         /* get the body of the response */
         $body = $response->getBody();
 
@@ -30,7 +36,7 @@ class LayoutPlugin extends Yaf_Plugin_Abstract {
         $response->clearBody();
 
         /* wrap it in the layout */
-        $layout = Yaf_Registry::get("smarty");
+        $layout = Registry::get("smarty");
         $layout->content = $body;
         $layout->assign('layout', $this->_layoutVars);
 
@@ -38,19 +44,19 @@ class LayoutPlugin extends Yaf_Plugin_Abstract {
         $response->setBody($layout->render($this->_layoutFile));
     }
 
-    public function preDispatch ( Yaf_Request_Abstract $request , Yaf_Response_Abstract $response ){
+    public function preDispatch ( Request_Abstract $request , Response_Abstract $response ){
  
     }
 
-    public function preResponse ( Yaf_Request_Abstract $request , Yaf_Response_Abstract $response ){
+    public function preResponse ( Request_Abstract $request , Response_Abstract $response ){
         
     }
 
-    public function routerShutdown ( Yaf_Request_Abstract $request , Yaf_Response_Abstract $response ){
+    public function routerShutdown ( Request_Abstract $request , Response_Abstract $response ){
 
     }
 
-    public function routerStartup ( Yaf_Request_Abstract $request , Yaf_Response_Abstract $response ){
+    public function routerStartup ( Request_Abstract $request , Response_Abstract $response ){
 
     }
 }

@@ -5,6 +5,7 @@
  * Date: 14-9-17
  * Time: 下午4:09
  */
+
 class DemoModel extends Object {
 
     private $_table;
@@ -35,7 +36,7 @@ class DemoModel extends Object {
     public function insertInfo()
     {
 
-        $this->_table = new self();
+        $this->_table = new static();
 
         $data = array(
             'login_name' => 'King',

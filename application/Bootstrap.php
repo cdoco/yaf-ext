@@ -8,23 +8,29 @@
  * 调用的次序, 和申明的次序相同
  */
 
-class Bootstrap extends Yaf_Bootstrap_Abstract{
+use \Yaf\Application;
+use \Yaf\Registry;
+use \Yaf\Loader;
+use \Yaf\Dispatcher;
+use \Yaf\Bootstrap_Abstract;
+
+class Bootstrap extends Bootstrap_Abstract{
 
     private $_config;
 
     public function _initConfig() {
 		//把配置保存起来
-        $this->_config = Yaf_Application::app()->getConfig();
-		Yaf_Registry::set('config', $this->_config);
+        $this->_config = Application::app()->getConfig();
+		Registry::set('config', $this->_config);
 	}
 
     public function _initLocalName() {
-        Yaf_Loader::getInstance()->registerLocalNamespace(array(
+        Loader::getInstance()->registerLocalNamespace(array(
             'Smarty','Swift','Munee'
         ));
     }
 
-    public function _initPlugin(Yaf_Dispatcher $dispatcher) {
+    public function _initPlugin(Dispatcher $dispatcher) {
 
         /**
          * register Routes plugin
@@ -53,15 +59,19 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
         }
     }
 
-    //初始化zend_db
-    public function _initZendDbAdapter(){
-        $dbAdapter = new Zend_Db_Adapter_Mysqli(
-            $this->_config->database->zend->toArray()
-        );
+    //初始化Eloquent Orm
+    public function _initEloquentORM(){
 
-        $dbAdapter->query("SET NAMES {$this->_config->database->zend->charset}");
+        Loader::import("vendor/autoload.php");
+        $capsule = new \Illuminate\Database\Capsule\Manager();
 
-        Zend_Db_Table::setDefaultAdapter($dbAdapter);
+        $capsule->addConnection(
+            $this->_config->orm->eloquent->toArray());
+
+        $capsule->bootEloquent();
+
+        $capsule->setAsGlobal();
+
     }
 
     public function _initCache(){
@@ -75,30 +85,30 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
             $server = array(array($cacheCfg->host,$cacheCfg->port,$cacheCfg->timeout));
             $cache->option("server", $server);
 
-            Yaf_Registry::set("cache", $cache);
+            Registry::set("cache", $cache);
         }
 
 
     }
 
 
-    public function _initRoute(Yaf_Dispatcher $dispatcher) {
+    public function _initRoute(Dispatcher $dispatcher) {
 		//在这里注册自己的路由协议,默认使用简单路由
-        $router = Yaf_Dispatcher::getInstance()->getRouter();
+        $router = Dispatcher::getInstance()->getRouter();
         /**
          * add the routes defined in ini config file
          */
-        $router->addConfig(Yaf_Registry::get("config")->routes);
+        $router->addConfig(Registry::get("config")->routes);
 	}
 
-    public function _initSmarty(Yaf_Dispatcher $dispatcher) {
-        Yaf_Loader::import("smarty/Adapter.php");
-        $smarty = new Smarty_Adapter(null, Yaf_Registry::get("config")->get("smarty")->get("index"));
-        Yaf_Registry::set("smarty", $smarty);
+    public function _initSmarty(Dispatcher $dispatcher) {
+        Loader::import("smarty/Adapter.php");
+        $smarty = new Smarty_Adapter(null, Registry::get("config")->get("smarty")->get("index"));
+        Registry::set("smarty", $smarty);
         $dispatcher->setView($smarty);
     }
 
-    public function _initLayout(Yaf_Dispatcher $dispatcher){
+    public function _initLayout(Dispatcher $dispatcher){
         /*layout allows boilerplate HTML to live in /views/layout rather than every script*/
         $layout = new LayoutPlugin('layout/layout.html');
 
@@ -106,7 +116,7 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
          * This is a hack to make up for the lack of a getPlugin
          * method in the dispatcher.
          */
-        Yaf_Registry::set('layout', $layout);
+        Registry::set('layout', $layout);
 
         /*add the plugin to the dispatcher*/
         $dispatcher->registerPlugin($layout);
