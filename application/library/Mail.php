@@ -1,6 +1,6 @@
 <?php
 
-require_once "Swift/swift_required.php";
+require_once "SwiftMailer/swift_required.php";
 
 class Mail {
     /**
