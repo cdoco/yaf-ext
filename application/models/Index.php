@@ -14,9 +14,11 @@ class IndexModel extends Object{
 
     protected $primaryKey = 'user_id';
 
-    public function getUserInfo(){
+    public function deleteUserByUserId($user_id = 174){
 
-        var_dump(DB::table("users")->count());
+        DB::table("users")
+            ->where("user_id",$user_id)
+            ->delete();
 
     }
 

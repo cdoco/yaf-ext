@@ -22,7 +22,7 @@ class IndexController extends Controller{
 
 //        var_dump(IndexModel::find(155)->toArray());
 
-        (new IndexModel)->getUserInfo();
+        (new IndexModel)->deleteUserByUserId();
 
 //        $this->_view->page = "+++++++++++++";
         /*layout*/
