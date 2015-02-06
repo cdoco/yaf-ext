@@ -1,23 +1,23 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty {fetch} plugin
+ * smarty {fetch} plugin
  *
  * Type:     function<br>
  * Name:     fetch<br>
  * Purpose:  fetch file, web or ftp data and display results
  * @link http://smarty.php.net/manual/en/language.function.fetch.php {fetch}
- *       (Smarty online manual)
+ *       (smarty online manual)
  * @author Monte Ohrt <monte at ohrt dot com>
  * @param array
- * @param Smarty
- * @return string|null if the assign parameter is passed, Smarty assigns the
+ * @param smarty
+ * @return string|null if the assign parameter is passed, smarty assigns the
  *                     result to a template variable
  */
 function smarty_function_fetch($params, &$smarty)
@@ -55,7 +55,7 @@ function smarty_function_fetch($params, &$smarty)
                 $host = $server_name = $uri_parts['host'];
                 $timeout = 30;
                 $accept = "image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*";
-                $agent = "Smarty Template Engine ".$smarty->_version;
+                $agent = "smarty Template Engine ".$smarty->_version;
                 $referer = "";
                 $uri = !empty($uri_parts['path']) ? $uri_parts['path'] : '/';
                 $uri .= !empty($uri_parts['query']) ? '?' . $uri_parts['query'] : '';

@@ -1,22 +1,22 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty {eval} function plugin
+ * smarty {eval} function plugin
  *
  * Type:     function<br>
  * Name:     eval<br>
  * Purpose:  evaluate a template variable as a template<br>
  * @link http://smarty.php.net/manual/en/language.function.eval.php {eval}
- *       (Smarty online manual)
+ *       (smarty online manual)
  * @author Monte Ohrt <monte at ohrt dot com>
  * @param array
- * @param Smarty
+ * @param smarty
  */
 function smarty_function_eval($params, &$smarty)
 {

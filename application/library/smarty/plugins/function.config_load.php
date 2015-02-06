@@ -1,18 +1,18 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 /**
- * Smarty {config_load} function plugin
+ * smarty {config_load} function plugin
  *
  * Type:     function<br>
  * Name:     config_load<br>
  * Purpose:  load config file vars
  * @link http://smarty.php.net/manual/en/language.function.config.load.php {config_load}
- *       (Smarty online manual)
+ *       (smarty online manual)
  * @author Monte Ohrt <monte at ohrt dot com>
  * @author messju mohr <messju at lammfellpuschen dot de> (added use of resources)
  * @param array Format:
@@ -22,7 +22,7 @@
  *       'scope' => local/parent/global
  *       'global' => overrides scope, setting to parent if true)
  * </pre>
- * @param Smarty
+ * @param smarty
  */
 function smarty_function_config_load($params, &$smarty)
 {

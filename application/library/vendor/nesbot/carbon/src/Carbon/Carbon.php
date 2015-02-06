@@ -46,8 +46,8 @@ use InvalidArgumentException;
  *
  * @property-read  DateTimeZone        $timezone the current timezone
  * @property-read  DateTimeZone        $tz alias of timezone
- * @property-write DateTimeZone|string  the current timezone
- * @property-write DateTimeZone|string  alias of timezone
+ * @property-write DateTimeZone|string $timezone the current timezone
+ * @property-write DateTimeZone|string $tz alias of timezone
  *
  */
 class Carbon extends DateTime

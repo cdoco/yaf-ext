@@ -1,19 +1,19 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty replace modifier plugin
+ * smarty replace modifier plugin
  *
  * Type:     modifier<br>
  * Name:     replace<br>
  * Purpose:  simple search/replace
  * @link http://smarty.php.net/manual/en/language.modifier.replace.php
- *          replace (Smarty online manual)
+ *          replace (smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
  * @param string

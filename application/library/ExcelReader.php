@@ -76,7 +76,7 @@ function GetInt4d($data, $pos) {
 // http://uk.php.net/manual/en/function.getdate.php
 function gmgetdate($ts = null){
 	$k = array('seconds','minutes','hours','mday','wday','mon','year','yday','weekday','month',0);
-	return(array_comb($k,split(":",gmdate('s:i:G:j:w:n:Y:z:l:F:U',is_null($ts)?time():$ts))));
+	return(array_comb($k,explode(":",gmdate('s:i:G:j:w:n:Y:z:l:F:U',is_null($ts)?time():$ts))));
 	} 
 
 // Added for PHP4 compatibility
@@ -309,7 +309,7 @@ define('SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT',	"%s");
 /*
 * Main Class
 */
-class Spreadsheet_Excel_Reader {
+class ExcelReader {
 
 	// MK: Added to make data retrieval easier
 	var $colnames = array();
@@ -394,7 +394,7 @@ class Spreadsheet_Excel_Reader {
 	}
 	function colwidth($col,$sheet=0) {
 		// Col width is actually the width of the number 0. So we have to estimate and come close
-		return $this->colInfo[$sheet][$col]['width']/9142*200; 
+		return $this->colInfo[$sheet][$col]['width']/9142*200;
 	}
 	function colhidden($col,$sheet=0) {
 		return !!$this->colInfo[$sheet][$col]['hidden'];
@@ -841,7 +841,7 @@ class Spreadsheet_Excel_Reader {
 
 		// Custom pattern can be POSITIVE;NEGATIVE;ZERO
 		// The "text" option as 4th parameter is not handled
-		$parts = split(";",$format);
+		$parts = explode(";",$format);
 		$pattern = $parts[0];
 		// Negative pattern
 		if (count($parts)>2 && $num==0) {
@@ -912,8 +912,8 @@ class Spreadsheet_Excel_Reader {
 	 *
 	 * Some basic initialisation
 	 */
-	function Spreadsheet_Excel_Reader($file='',$store_extended_info=true,$outputEncoding='') {
-		$this->_ole =& new OLERead();
+	function ExcelReader($file='',$store_extended_info=true,$outputEncoding='') {
+		$this->_ole = new OLERead();
 		$this->setUTFEncoder('iconv');
 		if ($outputEncoding != '') { 
 			$this->setOutputEncoding($outputEncoding);
@@ -1715,7 +1715,7 @@ class Spreadsheet_Excel_Reader {
 		$result = $string;
 		if ($this->_defaultEncoding){
 			switch ($this->_encoderFunction){
-				case 'iconv' :	 $result = iconv('UTF-16LE', $this->_defaultEncoding, $string);
+				case 'iconv' :	 $result = iconv('UTF-8', $this->_defaultEncoding, $string);
 								break;
 				case 'mb_convert_encoding' :	 $result = mb_convert_encoding($string, $this->_defaultEncoding, 'UTF-16LE' );
 								break;

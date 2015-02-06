@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2014-09-23 09:41:12
+<?php /* smarty version 2.6.26, created on 2014-09-23 09:41:12
          compiled from shop/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'cat', 'shop/index.html', 1, false),)), $this); ?>
@@ -87,4 +87,4 @@ unset($_smarty_tpl_vars);
 $this->_smarty_include(array('smarty_include_tpl_file' => ((is_array($_tmp=@APPLICATION_PATH)) ? $this->_run_mod_handler('cat', true, $_tmp, "/application/views/footer.html") : smarty_modifier_cat($_tmp, "/application/views/footer.html")), 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?>
+ ?>

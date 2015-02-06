@@ -1,19 +1,19 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty lower modifier plugin
+ * smarty lower modifier plugin
  *
  * Type:     modifier<br>
  * Name:     lower<br>
  * Purpose:  convert string to lowercase
  * @link http://smarty.php.net/manual/en/language.modifier.lower.php
- *          lower (Smarty online manual)
+ *          lower (smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
  * @return string

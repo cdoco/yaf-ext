@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty truncate modifier plugin
+ * smarty truncate modifier plugin
  *
  * Type:     modifier<br>
  * Name:     truncate<br>
@@ -15,7 +15,7 @@
  *           optionally splitting in the middle of a word, and
  *           appending the $etc string or inserting $etc into the middle.
  * @link http://smarty.php.net/manual/en/language.modifier.truncate.php
- *          truncate (Smarty online manual)
+ *          truncate (smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
  * @param integer

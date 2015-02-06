@@ -110,9 +110,10 @@ class Arr {
 
 			foreach ($array as $value)
 			{
-				$value = (array) $value;
-
-				$results[] = $value[$segment];
+				if (array_key_exists($segment, $value = (array) $value))
+				{
+					$results[] = $value[$segment];
+				}
 			}
 
 			$array = array_values($results);
@@ -224,6 +225,32 @@ class Arr {
 		}
 
 		return $array;
+	}
+
+	/**
+	 * Check if an item exists in an array using "dot" notation.
+	 *
+	 * @param  array   $array
+	 * @param  string  $key
+	 * @return bool
+	 */
+	public static function has($array, $key)
+	{
+		if (empty($array) || is_null($key)) return false;
+
+		if (array_key_exists($key, $array)) return true;
+
+		foreach (explode('.', $key) as $segment)
+		{
+			if ( ! is_array($array) || ! array_key_exists($segment, $array))
+			{
+				return false;
+			}
+
+			$array = $array[$segment];
+		}
+
+		return true;
 	}
 
 	/**
@@ -355,4 +382,5 @@ class Arr {
 
 		return $filtered;
 	}
+
 }

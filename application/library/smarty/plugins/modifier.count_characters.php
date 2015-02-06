@@ -1,19 +1,19 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty count_characters modifier plugin
+ * smarty count_characters modifier plugin
  *
  * Type:     modifier<br>
  * Name:     count_characteres<br>
  * Purpose:  count the number of characters in a text
  * @link http://smarty.php.net/manual/en/language.modifier.count.characters.php
- *          count_characters (Smarty online manual)
+ *          count_characters (smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
  * @param boolean include whitespace in the character count

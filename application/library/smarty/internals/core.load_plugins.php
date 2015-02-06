@@ -1,7 +1,7 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
@@ -21,7 +21,7 @@ function smarty_core_load_plugins($params, &$smarty)
         $_plugin = &$smarty->_plugins[$_type][$_name];
 
         /*
-         * We do not load plugin more than once for each instance of Smarty.
+         * We do not load plugin more than once for each instance of smarty.
          * The following code checks for that. The plugin can also be
          * registered dynamically at runtime, in which case template file
          * and line number will be unknown, so we fill them in.

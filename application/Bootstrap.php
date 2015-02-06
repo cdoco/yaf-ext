@@ -21,12 +21,12 @@ class Bootstrap extends Bootstrap_Abstract{
     public function _initConfig() {
 		//把配置保存起来
         $this->_config = Application::app()->getConfig();
-		Registry::set('config', $this->_config);
+        Registry::set('config', $this->_config);
 	}
 
     public function _initLocalName() {
         Loader::getInstance()->registerLocalNamespace(array(
-            'Smarty','Swift','Munee'
+            'smarty','Swift','Munee'
         ));
     }
 
@@ -39,7 +39,7 @@ class Bootstrap extends Bootstrap_Abstract{
         $dispatcher->registerPlugin($routes);
 
         /**
-         * register Smarty plugin
+         * register smarty plugin
          */
         $smarty = new SmartyPlugin();
         $dispatcher->registerPlugin($smarty);
@@ -87,7 +87,6 @@ class Bootstrap extends Bootstrap_Abstract{
 
             Registry::set("cache", $cache);
         }
-
 
     }
 

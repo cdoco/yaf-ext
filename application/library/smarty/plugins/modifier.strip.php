@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty strip modifier plugin
+ * smarty strip modifier plugin
  *
  * Type:     modifier<br>
  * Name:     strip<br>
@@ -16,7 +16,7 @@
  * Example:  {$var|strip} {$var|strip:"&nbsp;"}
  * Date:     September 25th, 2002
  * @link http://smarty.php.net/manual/en/language.modifier.strip.php
- *          strip (Smarty online manual)
+ *          strip (smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @version  1.0
  * @param string

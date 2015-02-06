@@ -14,11 +14,18 @@ class IndexModel extends Object{
 
     protected $primaryKey = 'user_id';
 
-    public function deleteUserByUserId($user_id = 174){
+    /**
+     * 根据Id删除一个用户
+     *
+     * @param int $user_id
+     * @return Array
+     */
+    public function deleteUserByUserId($user_id = 155){
 
-        DB::table("users")
+        return json_encode(DB::table("users")
             ->where("user_id",$user_id)
-            ->delete();
+            ->get()
+        );
 
     }
 

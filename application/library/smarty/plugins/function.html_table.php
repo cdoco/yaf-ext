@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty {html_table} function plugin
+ * smarty {html_table} function plugin
  *
  * Type:     function<br>
  * Name:     html_table<br>
@@ -41,9 +41,9 @@
  * @author credit to boots <boots dot smarty at yahoo dot com>
  * @version  1.1
  * @link http://smarty.php.net/manual/en/language.function.html.table.php {html_table}
- *          (Smarty online manual)
+ *          (smarty online manual)
  * @param array
- * @param Smarty
+ * @param smarty
  * @return string
  */
 function smarty_function_html_table($params, &$smarty)

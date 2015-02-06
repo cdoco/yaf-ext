@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Project:     Smarty: the PHP compiling template engine
+ * Project:     smarty: the PHP compiling template engine
  * File:        Smarty_Compiler.class.php
  *
  * This library is free software; you can redistribute it and/or
@@ -23,14 +23,14 @@
  * @author Andrei Zmievski <andrei@php.net>
  * @version 2.6.26
  * @copyright 2001-2005 New Digital Group, Inc.
- * @package Smarty
+ * @package smarty
  */
 
 /* $Id: Smarty_Compiler.class.php 3163 2009-06-17 14:39:24Z monte.ohrt $ */
 
 /**
  * Template compiling class
- * @package Smarty
+ * @package smarty
  */
 class Smarty_Compiler extends Smarty {
 
@@ -391,13 +391,13 @@ class Smarty_Compiler extends Smarty {
                                                               array($compiled_content, &$this));
                     $this->_plugins['postfilter'][$filter_name][3] = true;
                 } else {
-                    $this->_trigger_fatal_error("Smarty plugin error: postfilter '$filter_name' is not implemented");
+                    $this->_trigger_fatal_error("smarty plugin error: postfilter '$filter_name' is not implemented");
                 }
             }
         }
 
         // put header at the top of the compiled template
-        $template_header = "<?php /* Smarty version ".$this->_version.", created on ".strftime("%Y-%m-%d %H:%M:%S")."\n";
+        $template_header = "<?php /* smarty version ".$this->_version.", created on ".strftime("%Y-%m-%d %H:%M:%S")."\n";
         $template_header .= "         compiled from ".strtr(urlencode($resource_name), array('%2F'=>'/', '%3A'=>':'))." */ ?>\n";
 
         /* Emit code to load needed plugins. */
@@ -2244,7 +2244,7 @@ class Smarty_Compiler extends Smarty {
     }
 
     /**
-     * display Smarty syntax error
+     * display smarty syntax error
      *
      * @param string $error_msg
      * @param integer $error_type
@@ -2267,7 +2267,7 @@ class Smarty_Compiler extends Smarty {
         $_cacheable = !isset($this->_plugins[$type][$name]) || $this->_plugins[$type][$name][4];
         if ($_cacheable
             || 0<$this->_cacheable_state++) return '';
-        if (!isset($this->_cache_serial)) $this->_cache_serial = md5(uniqid('Smarty'));
+        if (!isset($this->_cache_serial)) $this->_cache_serial = md5(uniqid('smarty'));
         $_ret = 'if ($this->caching && !$this->_cache_including): echo \'{nocache:'
             . $this->_cache_serial . '#' . $this->_nocache_count
             . '}\'; endif;';

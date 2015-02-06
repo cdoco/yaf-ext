@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty plugin
+ * smarty plugin
  *
  * Type:     modifier<br>
  * Name:     nl2br<br>
@@ -19,7 +19,7 @@
  *           in replacement
  * Example:  {$text|nl2br}
  * @link http://smarty.php.net/manual/en/language.modifier.nl2br.php
- *          nl2br (Smarty online manual)
+ *          nl2br (smarty online manual)
  * @version  1.0
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string

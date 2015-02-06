@@ -14,7 +14,7 @@ use \Yaf\Registry;
 class SmartyPlugin extends Plugin_Abstract {
 
     /**
-     * Smarty 对象
+     * smarty 对象
      * @var
      */
     private $_smarty;

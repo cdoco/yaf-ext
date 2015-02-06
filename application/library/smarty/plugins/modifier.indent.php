@@ -1,19 +1,19 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty indent modifier plugin
+ * smarty indent modifier plugin
  *
  * Type:     modifier<br>
  * Name:     indent<br>
  * Purpose:  indent lines of text
  * @link http://smarty.php.net/manual/en/language.modifier.indent.php
- *          indent (Smarty online manual)
+ *          indent (smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
  * @param integer

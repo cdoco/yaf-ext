@@ -10,7 +10,14 @@ use \Yaf\Registry;
 
 class Object extends \Illuminate\Database\Eloquent\Model{
 
+    /**
+     * @var phpFastCache
+     */
+    protected $_cache;
+
+
     public function __construct(){
+
 
         $this->_cache = Registry::get("cache");
 

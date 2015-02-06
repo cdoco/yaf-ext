@@ -96,7 +96,7 @@ class Builder {
 		$this->query->whereIn($this->model->getQualifiedKeyName(), $id);
 
 		return $this->get($columns);
-    }
+	}
 
 	/**
 	 * Find a model by its primary key or throw an exception.
@@ -242,10 +242,8 @@ class Builder {
 		{
 			return $this->groupedPaginate($paginator, $perPage, $columns);
 		}
-		else
-		{
-			return $this->ungroupedPaginate($paginator, $perPage, $columns);
-		}
+
+		return $this->ungroupedPaginate($paginator, $perPage, $columns);
 	}
 
 	/**
@@ -374,10 +372,8 @@ class Builder {
 		{
 			return call_user_func($this->onDelete, $this);
 		}
-		else
-		{
-			return $this->query->delete();
-		}
+
+		return $this->query->delete();
 	}
 
 	/**
@@ -596,10 +592,10 @@ class Builder {
 	 * @param  string  $operator
 	 * @param  int     $count
 	 * @param  string  $boolean
-	 * @param  \Closure  $callback
+	 * @param  \Closure|null  $callback
 	 * @return \Illuminate\Database\Eloquent\Builder|static
 	 */
-	public function has($relation, $operator = '>=', $count = 1, $boolean = 'and', $callback = null)
+	public function has($relation, $operator = '>=', $count = 1, $boolean = 'and', Closure $callback = null)
 	{
 		$relation = $this->getHasRelationQuery($relation);
 
@@ -611,17 +607,42 @@ class Builder {
 	}
 
 	/**
-	 * Add a relationship count condition to the query with where clauses.
+	 * Add a relationship count condition to the query.
 	 *
 	 * @param  string  $relation
+	 * @param  string  $boolean
+	 * @param  \Closure|null  $callback
+	 * @return \Illuminate\Database\Eloquent\Builder|static
+	 */
+	public function doesntHave($relation, $boolean = 'and', Closure $callback = null)
+	{
+		return $this->has($relation, '<', 1, $boolean, $callback);
+	}
+
+	/**
+	 * Add a relationship count condition to the query with where clauses.
+	 *
+	 * @param  string    $relation
 	 * @param  \Closure  $callback
-	 * @param  string  $operator
-	 * @param  int     $count
+	 * @param  string    $operator
+	 * @param  int       $count
 	 * @return \Illuminate\Database\Eloquent\Builder|static
 	 */
 	public function whereHas($relation, Closure $callback, $operator = '>=', $count = 1)
 	{
 		return $this->has($relation, $operator, $count, 'and', $callback);
+	}
+
+	/**
+	 * Add a relationship count condition to the query with where clauses.
+	 *
+	 * @param  string  $relation
+	 * @param  \Closure|null  $callback
+	 * @return \Illuminate\Database\Eloquent\Builder|static
+	 */
+	public function whereDoesntHave($relation, Closure $callback = null)
+	{
+		return $this->doesntHave($relation, 'and', $callback);
 	}
 
 	/**
@@ -640,10 +661,10 @@ class Builder {
 	/**
 	 * Add a relationship count condition to the query with where clauses and an "or".
 	 *
-	 * @param  string  $relation
+	 * @param  string    $relation
 	 * @param  \Closure  $callback
-	 * @param  string  $operator
-	 * @param  int     $count
+	 * @param  string    $operator
+	 * @param  int       $count
 	 * @return \Illuminate\Database\Eloquent\Builder|static
 	 */
 	public function orWhereHas($relation, Closure $callback, $operator = '>=', $count = 1)
@@ -686,6 +707,8 @@ class Builder {
 		// where clauses the developer may have put in the relationship function over to
 		// the has query, and then copy the bindings from the "has" query to the main.
 		$relationQuery = $relation->getBaseQuery();
+
+		$hasQuery = $hasQuery->getModel()->removeGlobalScopes($hasQuery);
 
 		$hasQuery->mergeWheres(
 			$relationQuery->wheres, $relationQuery->getBindings()
@@ -778,8 +801,8 @@ class Builder {
 
 			if ( ! isset($results[$last = implode('.', $progress)]))
 			{
- 				$results[$last] = function() {};
- 			}
+				$results[$last] = function() {};
+			}
 		}
 
 		return $results;
@@ -789,7 +812,7 @@ class Builder {
 	 * Call the given model scope on the underlying model.
 	 *
 	 * @param  string  $scope
-	 * @param  array  $parameters
+	 * @param  array   $parameters
 	 * @return \Illuminate\Database\Query\Builder
 	 */
 	protected function callScope($scope, $parameters)
@@ -869,7 +892,7 @@ class Builder {
 	/**
 	 * Extend the builder with a given callback.
 	 *
-	 * @param  string  $name
+	 * @param  string    $name
 	 * @param  \Closure  $callback
 	 * @return void
 	 */
@@ -908,10 +931,8 @@ class Builder {
 		{
 			return $this->callScope($scope, $parameters);
 		}
-		else
-		{
-			$result = call_user_func_array(array($this->query, $method), $parameters);
-		}
+
+		$result = call_user_func_array(array($this->query, $method), $parameters);
 
 		return in_array($method, $this->passthru) ? $result : $this;
 	}

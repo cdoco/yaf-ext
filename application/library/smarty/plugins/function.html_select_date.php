@@ -1,12 +1,12 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 /**
- * Smarty {html_select_date} plugin
+ * smarty {html_select_date} plugin
  *
  * Type:     function<br>
  * Name:     html_select_date<br>
@@ -27,12 +27,12 @@
  *           - 1.3.4 fix behaviour of 0000-00-00 00:00:00 dates to match that
  *             of 0000-00-00 dates (cybot, boots)
  * @link http://smarty.php.net/manual/en/language.function.html.select.date.php {html_select_date}
- *      (Smarty online manual)
+ *      (smarty online manual)
  * @version 1.3.4
  * @author Andrei Zmievski
  * @author Monte Ohrt <monte at ohrt dot com>
  * @param array
- * @param Smarty
+ * @param smarty
  * @return string
  */
 function smarty_function_html_select_date($params, &$smarty)

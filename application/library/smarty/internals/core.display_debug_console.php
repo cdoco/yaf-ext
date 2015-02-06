@@ -1,18 +1,18 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 /**
- * Smarty debug_console function plugin
+ * smarty debug_console function plugin
  *
  * Type:     core<br>
  * Name:     display_debug_console<br>
  * Purpose:  display the javascript debug console window
  * @param array Format: null
- * @param Smarty
+ * @param smarty
  */
 function smarty_core_display_debug_console($params, &$smarty)
 {

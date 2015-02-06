@@ -49,28 +49,28 @@
     },
     {
         "name": "illuminate/support",
-        "version": "v4.2.9",
-        "version_normalized": "4.2.9.0",
+        "version": "v4.2.16",
+        "version_normalized": "4.2.16.0",
         "target-dir": "Illuminate/Support",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/support.git",
-            "reference": "b6716d34afce6e69523725f2534a5c3a54dba964"
+            "reference": "015f51f4d8cb3d9a29e7fe7932843acf15232941"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/support/zipball/b6716d34afce6e69523725f2534a5c3a54dba964",
-            "reference": "b6716d34afce6e69523725f2534a5c3a54dba964",
+            "url": "https://api.github.com/repos/illuminate/support/zipball/015f51f4d8cb3d9a29e7fe7932843acf15232941",
+            "reference": "015f51f4d8cb3d9a29e7fe7932843acf15232941",
             "shasum": ""
         },
         "require": {
             "php": ">=5.4.0"
         },
         "require-dev": {
-            "jeremeamia/superclosure": "~1.0",
+            "jeremeamia/superclosure": "~1.0.1",
             "patchwork/utf8": "1.1.*"
         },
-        "time": "2014-09-12 21:42:43",
+        "time": "2014-12-19 18:02:33",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -99,24 +99,24 @@
     },
     {
         "name": "illuminate/container",
-        "version": "v4.2.9",
-        "version_normalized": "4.2.9.0",
+        "version": "v4.2.16",
+        "version_normalized": "4.2.16.0",
         "target-dir": "Illuminate/Container",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/container.git",
-            "reference": "5c43bd3bd5eea2ed2061cd0dd57d72404aceb978"
+            "reference": "8db091c1b4e503ef8dcd4586d5c63e3997bc4e89"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/container/zipball/5c43bd3bd5eea2ed2061cd0dd57d72404aceb978",
-            "reference": "5c43bd3bd5eea2ed2061cd0dd57d72404aceb978",
+            "url": "https://api.github.com/repos/illuminate/container/zipball/8db091c1b4e503ef8dcd4586d5c63e3997bc4e89",
+            "reference": "8db091c1b4e503ef8dcd4586d5c63e3997bc4e89",
             "shasum": ""
         },
         "require": {
             "php": ">=5.4.0"
         },
-        "time": "2014-09-11 19:02:16",
+        "time": "2014-12-17 20:39:51",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -142,18 +142,18 @@
     },
     {
         "name": "illuminate/events",
-        "version": "v4.2.9",
-        "version_normalized": "4.2.9.0",
+        "version": "v4.2.16",
+        "version_normalized": "4.2.16.0",
         "target-dir": "Illuminate/Events",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/events.git",
-            "reference": "19f93bcd692a52b39f1bd125f6f112eda0c1b8b0"
+            "reference": "a8471d3f6c3e87c50e25e18f13908fffaef159df"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/events/zipball/19f93bcd692a52b39f1bd125f6f112eda0c1b8b0",
-            "reference": "19f93bcd692a52b39f1bd125f6f112eda0c1b8b0",
+            "url": "https://api.github.com/repos/illuminate/events/zipball/a8471d3f6c3e87c50e25e18f13908fffaef159df",
+            "reference": "a8471d3f6c3e87c50e25e18f13908fffaef159df",
             "shasum": ""
         },
         "require": {
@@ -161,7 +161,7 @@
             "illuminate/support": "4.2.*",
             "php": ">=5.4.0"
         },
-        "time": "2014-08-17 14:08:00",
+        "time": "2014-10-02 19:49:50",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -187,18 +187,18 @@
     },
     {
         "name": "illuminate/database",
-        "version": "v4.2.9",
-        "version_normalized": "4.2.9.0",
+        "version": "v4.2.16",
+        "version_normalized": "4.2.16.0",
         "target-dir": "Illuminate/Database",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/database.git",
-            "reference": "b66a7173ca6a81de3b2ccbd84372bee8624215f1"
+            "reference": "5d07587a51b13224cdda6417fbc25e9c13d276c9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/database/zipball/b66a7173ca6a81de3b2ccbd84372bee8624215f1",
-            "reference": "b66a7173ca6a81de3b2ccbd84372bee8624215f1",
+            "url": "https://api.github.com/repos/illuminate/database/zipball/5d07587a51b13224cdda6417fbc25e9c13d276c9",
+            "reference": "5d07587a51b13224cdda6417fbc25e9c13d276c9",
             "shasum": ""
         },
         "require": {
@@ -214,7 +214,7 @@
             "illuminate/filesystem": "4.2.*",
             "illuminate/pagination": "4.2.*"
         },
-        "time": "2014-09-11 14:10:29",
+        "time": "2014-12-22 20:55:49",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -242,6 +242,53 @@
             "laravel",
             "orm",
             "sql"
+        ]
+    },
+    {
+        "name": "nervetattoo/elasticsearch",
+        "version": "v2.4.1",
+        "version_normalized": "2.4.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nervetattoo/elasticsearch.git",
+            "reference": "6215e036b2e7940514d211828b852ad4118bb329"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nervetattoo/elasticsearch/zipball/6215e036b2e7940514d211828b852ad4118bb329",
+            "reference": "6215e036b2e7940514d211828b852ad4118bb329",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "atoum/atoum": "dev-master@dev"
+        },
+        "time": "2014-08-07 08:27:42",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "ElasticSearch": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Raymond Julin",
+                "email": "raymond.julin@gmail.com",
+                "homepage": "http://raymondjulin.com"
+            }
+        ],
+        "description": "ElasticSearch client for PHP 5.3",
+        "homepage": "http://github.com/nervetattoo/elasticsearch",
+        "keywords": [
+            "client",
+            "elasticsearch"
         ]
     }
 ]

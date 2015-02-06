@@ -6,6 +6,8 @@
  * Time: 下午2:09
  */
 
+use \ElasticSearch\Client;
+
 class IndexController extends Controller{
 
     public function init(){
@@ -14,22 +16,84 @@ class IndexController extends Controller{
 
     public function indexAction(){
 
+//        phpinfo();die();
+//        var_dump((new IndexModel)->deleteUserByUserId()); die();
+//        $client = new Yar_Client("http://192.168.10.122/admin/");
+//        $client->SetOpt(YAR_OPT_PACKAGER, "json");
+//        var_dump($client->deleteUserByUserId());
+
+        /* call remote service */
+//        $result = $client->some_method("parameter");
+//        die();
+//        $data = new ExcelReader(APPLICATION_PATH."/source/example.xls");
+//        $data->dump(true,true);
+//        var_dump($data->sheets[0]['numRows']);
+//        die();
+//        var_dump(base64_decode("FgFikMDYVdFRaK4Wx5cNOEnnRyNWTK+OOA4zQZI4Fd+UWwWCSWlFfHp1ESAiA4jLjukqtp0NDJvkJqlLevRuwA=="));
+//        $cdoco = new Cdoco();
+//        $cdoco->query("set names utf8");
+//        var_dump($cdoco->query("select * from slm_product"));
+//        die();
+
 //        $data = (new DemoModel())->selectInfo();
-
 //        echo Payment_AliPay::ERR_ANT_VERIFY_FAILED;
-
 //        var_dump($data);
+        $es = Client::connection(array(
+            'servers' => '192.168.10.122:9200',
+        ));
 
+//        $es->map(array(
+//            'title' => array(
+//                'type' => 'my-type',
+//                'index' => 'my-index'
+//            )
+//        ));
+
+//        $es->setType("t-type")->setIndex("my-index")
+//            ->index(array('title' => 'My cool document','id' => '7'));
+//        $es->index("my-index");
+//        $es->setIndex("my-index")
+//            ->setType("my-type");
+
+        $results = $es
+            ->setIndex(["my-index"])
+            ->setType(["t-type", "other-type"])
+            ->search([
+                    'query' => [
+                        'term' => ['title' => 'cool'],
+//                        'filtered' => [
+//                            'query' => [
+//                                'term' => ['id' => 5]
+//                            ],
+//                            'filter' => [
+//                                'term' => ['id' => 5]
+//                            ]
+//                        ]
+                    ],
+                    'from' => 1,
+                    'size' => 10,
+                    'sort' => ['id' => ['order' => 'asc']],
+                    'fields' => ['title','id']
+                ]
+            );
+        $dsl = new \ElasticSearch\DSL\Builder;
+
+//        var_dump($es->search('cool'));
+//        var_dump($es->get(1));
+        var_dump($results);
+//        var_dump($es->search(array(
+//            'query' => array(
+//                'term' => array('title' => 'cool')
+//            )
+//        )));
 //        var_dump(IndexModel::find(155)->toArray());
 
-        (new IndexModel)->deleteUserByUserId();
+//        (new IndexModel)->deleteUserByUserId();
 
 //        $this->_view->page = "+++++++++++++";
         /*layout*/
 
         $this->_layout->meta_title = 'A Blog';
-
-
 
     }
 
@@ -38,21 +102,20 @@ class IndexController extends Controller{
         phpFastCache::$storage = "auto";
 
         $cache = __c("memcache");
-        $server = array(array("127.0.0.1",11211,100));
+        $server = array(array("192.168.10.122",11211,100));
         $cache->option("server", $server);
 
         $cache->keyword = array("something here++++++++++++++++_________", 600);
-        var_dump($cache->get("31lh9kj9cs3627fauu90njuj26"));
+//        var_dump($cache->get("31lh9kj9cs3627fauu90njuj26"));
         var_dump($cache->keyword);
-
 
         $excel = new CreateExcel();
 
-        $excel->setHeader('高子航' . date('Y年m月d日 H:i:s', time()));
-        $excel->setTitle(array( '高子航'));
+//        $excel->setHeader('高子航' . date('Y年m月d日 H:i:s', time()));
+//        $excel->setTitle(array( '高子航'));
 
-        $excel->setData(array());
-        $excel->echoExcel('show_' . date('Y_m_d_H_i_s', time()));
+//        $excel->setData(array());
+//        $excel->echoExcel('show_' . date('Y_m_d_H_i_s', time()));
 
         die();
     }

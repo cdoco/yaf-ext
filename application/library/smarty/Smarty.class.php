@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Project:     Smarty: the PHP compiling template engine
- * File:        Smarty.class.php
+ * Project:     smarty: the PHP compiling template engine
+ * File:        smarty.class.php
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,18 +19,18 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  * For questions, help, comments, discussion, etc., please join the
- * Smarty mailing list. Send a blank e-mail to
- * smarty-discussion-subscribe@googlegroups.com 
+ * smarty mailing list. Send a blank e-mail to
+ * smarty-discussion-subscribe@googlegroups.com
  *
  * @link http://www.smarty.net/
  * @copyright 2001-2005 New Digital Group, Inc.
  * @author Monte Ohrt <monte at ohrt dot com>
  * @author Andrei Zmievski <andrei@php.net>
- * @package Smarty
+ * @package smarty
  * @version 2.6.26
  */
 
-/* $Id: Smarty.class.php 3163 2009-06-17 14:39:24Z monte.ohrt $ */
+/* $Id: smarty.class.php 3163 2009-06-17 14:39:24Z monte.ohrt $ */
 
 /**
  * DIR_SEP isn't used anymore, but third party apps might
@@ -40,7 +40,7 @@ if(!defined('DIR_SEP')) {
 }
 
 /**
- * set SMARTY_DIR to absolute path to Smarty library files.
+ * set SMARTY_DIR to absolute path to smarty library files.
  * if not defined, include_path will be used. Sets SMARTY_DIR only if user
  * application has not already defined it.
  */
@@ -59,12 +59,12 @@ define('SMARTY_PHP_PASSTHRU',   0);
 //define('SMARTY_PHP_ALLOW',      3);
 
 /**
- * @package Smarty
+ * @package smarty
  */
 class Smarty
 {
     /**#@+
-     * Smarty Configuration Section
+     * smarty Configuration Section
      */
 
     /**
@@ -131,7 +131,7 @@ class Smarty
     var $debugging_ctrl  =  'NONE';
 
     /**
-     * This tells Smarty whether to check for recompiling or not. Recompiling
+     * This tells smarty whether to check for recompiling or not. Recompiling
      * does not need to happen unless a template or config file is changed.
      * Typically you enable this during development, and disable for
      * production.
@@ -188,7 +188,7 @@ class Smarty
     var $cache_modified_check = false;
 
     /**
-     * This determines how Smarty handles "<?php ... ?>" tags in templates.
+     * This determines how smarty handles "<?php ... ?>" tags in templates.
      * possible values:
      * <ul>
      *  <li>SMARTY_PHP_PASSTHRU -> print tags as plain text</li>
@@ -221,7 +221,7 @@ class Smarty
     var $secure_dir     =   array();
 
     /**
-     * These are the security settings for Smarty. They are used only when
+     * These are the security settings for smarty. They are used only when
      * {@link $security} is enabled.
      *
      * @var array
@@ -292,7 +292,7 @@ class Smarty
     var $compile_id            = null;
 
     /**
-     * This tells Smarty whether or not to use sub dirs in the cache/ and
+     * This tells smarty whether or not to use sub dirs in the cache/ and
      * templates_c/ directories. sub directories better organized, but
      * may not work well with PHP safe mode enabled.
      *
@@ -332,7 +332,7 @@ class Smarty
     var $cache_handler_func   = null;
 
     /**
-     * This indicates which filters are automatically loaded into Smarty.
+     * This indicates which filters are automatically loaded into smarty.
      *
      * @var array array of filter names
      */
@@ -400,7 +400,7 @@ class Smarty
     var $config_class          =   'Config_File';
 
 /**#@+
- * END Smarty Configuration Section
+ * END smarty Configuration Section
  * There should be no need to touch anything below this line.
  * @access private
  */
@@ -454,14 +454,14 @@ class Smarty
     var $_config               = array(array('vars'  => array(), 'files' => array()));
 
     /**
-     * md5 checksum of the string 'Smarty'
+     * md5 checksum of the string 'smarty'
      *
      * @var string
      */
     var $_smarty_md5           = 'f8d698aea36fcbead2b9d5359ffca76f';
 
     /**
-     * Smarty version number
+     * smarty version number
      *
      * @var string
      */
@@ -1083,14 +1083,14 @@ class Smarty
     }
 
     /**
-     * trigger Smarty error
+     * trigger smarty error
      *
      * @param string $error_msg
      * @param integer $error_type
      */
     function trigger_error($error_msg, $error_type = E_USER_WARNING)
     {
-        trigger_error("Smarty error: $error_msg", $error_type);
+        trigger_error("smarty error: $error_msg", $error_type);
     }
 
 
@@ -1794,7 +1794,7 @@ class Smarty
     }
 
     /**
-     * trigger Smarty plugin error
+     * trigger smarty plugin error
      *
      * @param string $error_msg
      * @param string $tpl_file

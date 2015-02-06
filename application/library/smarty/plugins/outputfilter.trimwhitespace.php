@@ -1,12 +1,12 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 /**
- * Smarty trimwhitespace outputfilter plugin
+ * smarty trimwhitespace outputfilter plugin
  *
  * File:     outputfilter.trimwhitespace.php<br>
  * Type:     outputfilter<br>
@@ -23,7 +23,7 @@
  * @author Contributions from Lars Noschinski <lars@usenet.noschinski.de>
  * @version  1.3
  * @param string
- * @param Smarty
+ * @param smarty
  */
 function smarty_outputfilter_trimwhitespace($source, &$smarty)
 {

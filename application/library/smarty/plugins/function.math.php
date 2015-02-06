@@ -1,22 +1,22 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty {math} function plugin
+ * smarty {math} function plugin
  *
  * Type:     function<br>
  * Name:     math<br>
  * Purpose:  handle math computations in template<br>
  * @link http://smarty.php.net/manual/en/language.function.math.php {math}
- *          (Smarty online manual)
+ *          (smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param array
- * @param Smarty
+ * @param smarty
  * @return string
  */
 function smarty_function_math($params, &$smarty)

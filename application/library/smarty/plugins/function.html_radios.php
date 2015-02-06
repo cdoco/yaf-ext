@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty {html_radios} function plugin
+ * smarty {html_radios} function plugin
  *
  * File:       function.html_radios.php<br>
  * Type:       function<br>
@@ -29,12 +29,12 @@
  * {html_radios values=$ids checked=$checked separator='<br>' output=$names}
  * </pre>
  * @link http://smarty.php.net/manual/en/language.function.html.radios.php {html_radios}
- *      (Smarty online manual)
+ *      (smarty online manual)
  * @author     Christopher Kvarme <christopher.kvarme@flashjab.com>
  * @author credits to Monte Ohrt <monte at ohrt dot com>
  * @version    1.0
  * @param array
- * @param Smarty
+ * @param smarty
  * @return string
  * @uses smarty_function_escape_special_chars()
  */

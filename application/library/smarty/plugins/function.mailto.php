@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty {mailto} function plugin
+ * smarty {mailto} function plugin
  *
  * Type:     function<br>
  * Name:     mailto<br>
@@ -39,12 +39,12 @@
  * {mailto address="me@domain.com" extra='class="mailto"'}
  * </pre>
  * @link http://smarty.php.net/manual/en/language.function.mailto.php {mailto}
- *          (Smarty online manual)
+ *          (smarty online manual)
  * @version  1.2
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @author   credits to Jason Sweat (added cc, bcc and subject functionality)
  * @param    array
- * @param    Smarty
+ * @param    smarty
  * @return   string
  */
 function smarty_function_mailto($params, &$smarty)

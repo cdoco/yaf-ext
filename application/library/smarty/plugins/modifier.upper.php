@@ -1,19 +1,19 @@
 <?php
 /**
- * Smarty plugin
- * @package Smarty
+ * smarty plugin
+ * @package smarty
  * @subpackage plugins
  */
 
 
 /**
- * Smarty upper modifier plugin
+ * smarty upper modifier plugin
  *
  * Type:     modifier<br>
  * Name:     upper<br>
  * Purpose:  convert string to uppercase
  * @link http://smarty.php.net/manual/en/language.modifier.upper.php
- *          upper (Smarty online manual)
+ *          upper (smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
  * @return string
