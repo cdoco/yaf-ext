@@ -1,16 +1,16 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 /**
- * smarty assign_smarty_interface core plugin
+ * Smarty assign_smarty_interface core plugin
  *
  * Type:     core<br>
  * Name:     assign_smarty_interface<br>
- * Purpose:  assign the $smarty interface variable
+ * Purpose:  assign the $Smarty interface variable
  * @param array Format: null
  * @param smarty
  */

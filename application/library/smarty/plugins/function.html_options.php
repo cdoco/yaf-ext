@@ -1,13 +1,13 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 
 /**
- * smarty {html_options} function plugin
+ * Smarty {html_options} function plugin
  *
  * Type:     function<br>
  * Name:     html_options<br>
@@ -19,8 +19,8 @@
  *           - output     (required if not options supplied) - array
  * Purpose:  Prints the list of <option> tags generated from
  *           the passed parameters
- * @link http://smarty.php.net/manual/en/language.function.html.options.php {html_image}
- *      (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.function.html.options.php {html_image}
+ *      (Smarty online manual)
  * @author Monte Ohrt <monte at ohrt dot com>
  * @param array
  * @param smarty

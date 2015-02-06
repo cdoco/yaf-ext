@@ -36,7 +36,7 @@ class LayoutPlugin extends Plugin_Abstract {
         $response->clearBody();
 
         /* wrap it in the layout */
-        $layout = Registry::get("smarty");
+        $layout = Registry::get("Smarty");
         $layout->content = $body;
         $layout->assign('layout', $this->_layoutVars);
 

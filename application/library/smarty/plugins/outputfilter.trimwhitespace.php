@@ -1,12 +1,12 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 /**
- * smarty trimwhitespace outputfilter plugin
+ * Smarty trimwhitespace outputfilter plugin
  *
  * File:     outputfilter.trimwhitespace.php<br>
  * Type:     outputfilter<br>
@@ -17,7 +17,7 @@
  *           up code and saving bandwidth. Does not affect
  *           <<PRE>></PRE> and <SCRIPT></SCRIPT> blocks.<br>
  * Install:  Drop into the plugin directory, call
- *           <code>$smarty->load_filter('output','trimwhitespace');</code>
+ *           <code>$Smarty->load_filter('output','trimwhitespace');</code>
  *           from application.
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @author Contributions from Lars Noschinski <lars@usenet.noschinski.de>

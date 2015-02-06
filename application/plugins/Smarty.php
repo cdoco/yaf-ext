@@ -14,7 +14,7 @@ use \Yaf\Registry;
 class SmartyPlugin extends Plugin_Abstract {
 
     /**
-     * smarty 对象
+     * Smarty 对象
      * @var
      */
     private $_smarty;
@@ -23,7 +23,7 @@ class SmartyPlugin extends Plugin_Abstract {
 
     public function routerShutdown(Request_Abstract $request, Response_Abstract $response) {
 
-        $this->_smarty = Registry::get("smarty");
+        $this->_smarty = Registry::get("Smarty");
 
         $smarty_cfg = Registry::get("config")->get("smarty")->toArray();
 

@@ -1,19 +1,19 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 
 /**
- * smarty {html_select_time} function plugin
+ * Smarty {html_select_time} function plugin
  *
  * Type:     function<br>
  * Name:     html_select_time<br>
  * Purpose:  Prints the dropdowns for time selection
- * @link http://smarty.php.net/manual/en/language.function.html.select.time.php {html_select_time}
- *          (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.function.html.select.time.php {html_select_time}
+ *          (Smarty online manual)
  * @author Roberto Berto <roberto@berto.net>
  * @credits Monte Ohrt <monte AT ohrt DOT com>
  * @param array

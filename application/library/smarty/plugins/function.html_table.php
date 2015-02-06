@@ -1,13 +1,13 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 
 /**
- * smarty {html_table} function plugin
+ * Smarty {html_table} function plugin
  *
  * Type:     function<br>
  * Name:     html_table<br>
@@ -38,10 +38,10 @@
  * </pre>
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @author credit to Messju Mohr <messju at lammfellpuschen dot de>
- * @author credit to boots <boots dot smarty at yahoo dot com>
+ * @author credit to boots <boots dot Smarty at yahoo dot com>
  * @version  1.1
- * @link http://smarty.php.net/manual/en/language.function.html.table.php {html_table}
- *          (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.function.html.table.php {html_table}
+ *          (Smarty online manual)
  * @param array
  * @param smarty
  * @return string

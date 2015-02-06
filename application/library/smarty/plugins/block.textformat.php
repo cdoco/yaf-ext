@@ -1,19 +1,19 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 /**
- * smarty {textformat}{/textformat} block plugin
+ * Smarty {textformat}{/textformat} block plugin
  *
  * Type:     block function<br>
  * Name:     textformat<br>
  * Purpose:  format text a certain way with preset styles
  *           or custom wrap/indent settings<br>
- * @link http://smarty.php.net/manual/en/language.function.textformat.php {textformat}
- *       (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.function.textformat.php {textformat}
+ *       (Smarty online manual)
  * @param array
  * <pre>
  * Params:   style: string (email)

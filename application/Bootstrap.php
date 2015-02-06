@@ -26,7 +26,7 @@ class Bootstrap extends Bootstrap_Abstract{
 
     public function _initLocalName() {
         Loader::getInstance()->registerLocalNamespace(array(
-            'smarty','Swift','Munee'
+            'Smarty','Swift','Munee'
         ));
     }
 
@@ -39,7 +39,7 @@ class Bootstrap extends Bootstrap_Abstract{
         $dispatcher->registerPlugin($routes);
 
         /**
-         * register smarty plugin
+         * register Smarty plugin
          */
         $smarty = new SmartyPlugin();
         $dispatcher->registerPlugin($smarty);
@@ -103,7 +103,7 @@ class Bootstrap extends Bootstrap_Abstract{
     public function _initSmarty(Dispatcher $dispatcher) {
         Loader::import("smarty/Adapter.php");
         $smarty = new Smarty_Adapter(null, Registry::get("config")->get("smarty")->get("index"));
-        Registry::set("smarty", $smarty);
+        Registry::set("Smarty", $smarty);
         $dispatcher->setView($smarty);
     }
 

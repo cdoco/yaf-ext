@@ -1,20 +1,20 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 
 /**
- * smarty {counter} function plugin
+ * Smarty {counter} function plugin
  *
  * Type:     function<br>
  * Name:     counter<br>
  * Purpose:  print out a counter value
  * @author Monte Ohrt <monte at ohrt dot com>
- * @link http://smarty.php.net/manual/en/language.function.counter.php {counter}
- *       (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.function.counter.php {counter}
+ *       (Smarty online manual)
  * @param array parameters
  * @param smarty
  * @return string|null

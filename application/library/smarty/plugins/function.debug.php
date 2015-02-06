@@ -1,25 +1,25 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 
 /**
- * smarty {debug} function plugin
+ * Smarty {debug} function plugin
  *
  * Type:     function<br>
  * Name:     debug<br>
  * Date:     July 1, 2002<br>
  * Purpose:  popup debug window
- * @link http://smarty.php.net/manual/en/language.function.debug.php {debug}
- *       (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.function.debug.php {debug}
+ *       (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @version  1.0
  * @param array
  * @param smarty
- * @return string output from {@link smarty::_generate_debug_output()}
+ * @return string output from {@link Smarty::_generate_debug_output()}
  */
 function smarty_function_debug($params, &$smarty)
 {

@@ -1,7 +1,7 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
@@ -10,7 +10,7 @@
  */
 require_once $smarty->_get_plugin_filepath('shared', 'make_timestamp');
 /**
- * smarty date_format modifier plugin
+ * Smarty date_format modifier plugin
  *
  * Type:     modifier<br>
  * Name:     date_format<br>
@@ -19,8 +19,8 @@ require_once $smarty->_get_plugin_filepath('shared', 'make_timestamp');
  *         - string: input date string
  *         - format: strftime format for output
  *         - default_date: default date if $string is empty
- * @link http://smarty.php.net/manual/en/language.modifier.date.format.php
- *          date_format (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.modifier.date.format.php
+ *          date_format (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
  * @param string

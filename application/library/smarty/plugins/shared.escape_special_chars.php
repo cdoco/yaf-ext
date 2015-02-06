@@ -1,7 +1,7 @@
 <?php
 /**
- * smarty shared plugin
- * @package smarty
+ * Smarty shared plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
@@ -10,7 +10,7 @@
  * escape_special_chars common function
  *
  * Function: smarty_function_escape_special_chars<br>
- * Purpose:  used by other smarty functions to escape
+ * Purpose:  used by other Smarty functions to escape
  *           special chars except for already escaped ones
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string

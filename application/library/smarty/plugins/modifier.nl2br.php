@@ -1,13 +1,13 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 
 /**
- * smarty plugin
+ * Smarty plugin
  *
  * Type:     modifier<br>
  * Name:     nl2br<br>
@@ -18,8 +18,8 @@
  *         - preceed_test = if true, includes preceeding break tags
  *           in replacement
  * Example:  {$text|nl2br}
- * @link http://smarty.php.net/manual/en/language.modifier.nl2br.php
- *          nl2br (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.modifier.nl2br.php
+ *          nl2br (Smarty online manual)
  * @version  1.0
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string

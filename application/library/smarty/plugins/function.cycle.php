@@ -1,12 +1,12 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 /**
- * smarty {cycle} function plugin
+ * Smarty {cycle} function plugin
  *
  * Type:     function<br>
  * Name:     cycle<br>
@@ -30,8 +30,8 @@
  * {cycle name=row values="one,two,three" reset=true}
  * {cycle name=row}
  * </pre>
- * @link http://smarty.php.net/manual/en/language.function.cycle.php {cycle}
- *       (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.function.cycle.php {cycle}
+ *       (Smarty online manual)
  * @author Monte Ohrt <monte at ohrt dot com>
  * @author credit to Mark Priatel <mpriatel@rogers.com>
  * @author credit to Gerard <gerard@interfold.com>

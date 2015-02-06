@@ -1,13 +1,13 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 
 /**
- * smarty {html_checkboxes} function plugin
+ * Smarty {html_checkboxes} function plugin
  *
  * File:       function.html_checkboxes.php<br>
  * Type:       function<br>
@@ -28,8 +28,8 @@
  * {html_checkboxes values=$ids name='box' separator='<br>' output=$names}
  * {html_checkboxes values=$ids checked=$checked separator='<br>' output=$names}
  * </pre>
- * @link http://smarty.php.net/manual/en/language.function.html.checkboxes.php {html_checkboxes}
- *      (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.function.html.checkboxes.php {html_checkboxes}
+ *      (Smarty online manual)
  * @author     Christopher Kvarme <christopher.kvarme@flashjab.com>
  * @author credits to Monte Ohrt <monte at ohrt dot com>
  * @version    1.0

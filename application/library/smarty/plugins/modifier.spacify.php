@@ -1,19 +1,19 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 
 /**
- * smarty spacify modifier plugin
+ * Smarty spacify modifier plugin
  *
  * Type:     modifier<br>
  * Name:     spacify<br>
  * Purpose:  add spaces between characters in a string
- * @link http://smarty.php.net/manual/en/language.modifier.spacify.php
- *          spacify (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.modifier.spacify.php
+ *          spacify (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
  * @param string

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Project:     smarty: the PHP compiling template engine
+ * Project:     Smarty: the PHP compiling template engine
  * File:        Smarty_Compiler.class.php
  *
  * This library is free software; you can redistribute it and/or
@@ -18,19 +18,19 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * @link http://smarty.php.net/
+ * @link http://Smarty.php.net/
  * @author Monte Ohrt <monte at ohrt dot com>
  * @author Andrei Zmievski <andrei@php.net>
  * @version 2.6.26
  * @copyright 2001-2005 New Digital Group, Inc.
- * @package smarty
+ * @package Smarty
  */
 
 /* $Id: Smarty_Compiler.class.php 3163 2009-06-17 14:39:24Z monte.ohrt $ */
 
 /**
  * Template compiling class
- * @package smarty
+ * @package Smarty
  */
 class Smarty_Compiler extends Smarty {
 
@@ -391,13 +391,13 @@ class Smarty_Compiler extends Smarty {
                                                               array($compiled_content, &$this));
                     $this->_plugins['postfilter'][$filter_name][3] = true;
                 } else {
-                    $this->_trigger_fatal_error("smarty plugin error: postfilter '$filter_name' is not implemented");
+                    $this->_trigger_fatal_error("Smarty plugin error: postfilter '$filter_name' is not implemented");
                 }
             }
         }
 
         // put header at the top of the compiled template
-        $template_header = "<?php /* smarty version ".$this->_version.", created on ".strftime("%Y-%m-%d %H:%M:%S")."\n";
+        $template_header = "<?php /* Smarty version ".$this->_version.", created on ".strftime("%Y-%m-%d %H:%M:%S")."\n";
         $template_header .= "         compiled from ".strtr(urlencode($resource_name), array('%2F'=>'/', '%3A'=>':'))." */ ?>\n";
 
         /* Emit code to load needed plugins. */
@@ -863,7 +863,7 @@ class Smarty_Compiler extends Smarty {
         }
 
         if($this->_reg_objects[$object][2]) {
-            // smarty object argument format
+            // Smarty object argument format
             $args = "array(".implode(',', (array)$arg_list)."), \$this";
         } else {
             // traditional argument format
@@ -1628,7 +1628,7 @@ class Smarty_Compiler extends Smarty {
             // $ variable or object
             $return = $this->_parse_var($match[1]);
             $modifiers = $match[2];
-            if (!empty($this->default_modifiers) && !preg_match('~(^|\|)smarty:nodefaults($|\|)~',$modifiers)) {
+            if (!empty($this->default_modifiers) && !preg_match('~(^|\|)Smarty:nodefaults($|\|)~',$modifiers)) {
                 $_default_mod_string = implode('|',(array)$this->default_modifiers);
                 $modifiers = empty($modifiers) ? $_default_mod_string : $_default_mod_string . '|' . $modifiers;
             }
@@ -1762,11 +1762,11 @@ class Smarty_Compiler extends Smarty {
             $_indexes = $match[0];
             $_var_name = array_shift($_indexes);
 
-            /* Handle $smarty.* variable references as a special case. */
-            if ($_var_name == 'smarty') {
+            /* Handle $Smarty.* variable references as a special case. */
+            if ($_var_name == 'Smarty') {
                 /*
                  * If the reference could be compiled, use the compiled output;
-                 * otherwise, fall back on the $smarty variable generated at
+                 * otherwise, fall back on the $Smarty variable generated at
                  * run-time.
                  */
                 if (($smarty_ref = $this->_compile_smarty_ref($_indexes)) !== null) {
@@ -1912,8 +1912,8 @@ class Smarty_Compiler extends Smarty {
         for ($_i = 0, $_for_max = count($_modifiers); $_i < $_for_max; $_i++) {
             $_modifier_name = $_modifiers[$_i];
 
-            if($_modifier_name == 'smarty') {
-                // skip smarty modifier
+            if($_modifier_name == 'Smarty') {
+                // skip Smarty modifier
                 continue;
             }
 
@@ -1987,7 +1987,7 @@ class Smarty_Compiler extends Smarty {
 
 
     /**
-     * Compiles references of type $smarty.foo
+     * Compiles references of type $Smarty.foo
      *
      * @param string $indexes
      * @return string
@@ -1998,7 +1998,7 @@ class Smarty_Compiler extends Smarty {
         $_ref = substr($indexes[0], 1);
         foreach($indexes as $_index_no=>$_index) {
             if (substr($_index, 0, 1) != '.' && $_index_no<2 || !preg_match('~^(\.|\[|->)~', $_index)) {
-                $this->_syntax_error('$smarty' . implode('', array_slice($indexes, 0, 2)) . ' is an invalid reference', E_USER_ERROR, __FILE__, __LINE__);
+                $this->_syntax_error('$Smarty' . implode('', array_slice($indexes, 0, 2)) . ' is an invalid reference', E_USER_ERROR, __FILE__, __LINE__);
             }
         }
 
@@ -2161,12 +2161,12 @@ class Smarty_Compiler extends Smarty {
                 break;
                 
             default:
-                $this->_syntax_error('$smarty.' . $_ref . ' is an unknown reference', E_USER_ERROR, __FILE__, __LINE__);
+                $this->_syntax_error('$Smarty.' . $_ref . ' is an unknown reference', E_USER_ERROR, __FILE__, __LINE__);
                 break;
         }
 
         if (isset($_max_index) && count($indexes) > $_max_index) {
-            $this->_syntax_error('$smarty' . implode('', $indexes) .' is an invalid reference', E_USER_ERROR, __FILE__, __LINE__);
+            $this->_syntax_error('$Smarty' . implode('', $indexes) .' is an invalid reference', E_USER_ERROR, __FILE__, __LINE__);
         }
 
         array_shift($indexes);
@@ -2244,7 +2244,7 @@ class Smarty_Compiler extends Smarty {
     }
 
     /**
-     * display smarty syntax error
+     * display Smarty syntax error
      *
      * @param string $error_msg
      * @param integer $error_type
@@ -2267,7 +2267,7 @@ class Smarty_Compiler extends Smarty {
         $_cacheable = !isset($this->_plugins[$type][$name]) || $this->_plugins[$type][$name][4];
         if ($_cacheable
             || 0<$this->_cacheable_state++) return '';
-        if (!isset($this->_cache_serial)) $this->_cache_serial = md5(uniqid('smarty'));
+        if (!isset($this->_cache_serial)) $this->_cache_serial = md5(uniqid('Smarty'));
         $_ret = 'if ($this->caching && !$this->_cache_including): echo \'{nocache:'
             . $this->_cache_serial . '#' . $this->_nocache_count
             . '}\'; endif;';

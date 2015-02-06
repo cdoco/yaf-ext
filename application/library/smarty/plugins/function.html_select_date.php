@@ -1,12 +1,12 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 /**
- * smarty {html_select_date} plugin
+ * Smarty {html_select_date} plugin
  *
  * Type:     function<br>
  * Name:     html_select_date<br>
@@ -26,8 +26,8 @@
  *             dropdown to include given date unless explicitly set (Monte)
  *           - 1.3.4 fix behaviour of 0000-00-00 00:00:00 dates to match that
  *             of 0000-00-00 dates (cybot, boots)
- * @link http://smarty.php.net/manual/en/language.function.html.select.date.php {html_select_date}
- *      (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.function.html.select.date.php {html_select_date}
+ *      (Smarty online manual)
  * @version 1.3.4
  * @author Andrei Zmievski
  * @author Monte Ohrt <monte at ohrt dot com>

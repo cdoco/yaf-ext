@@ -1,6 +1,6 @@
 <?php
 /**
- * smarty.php
+ * Smarty.php
  * 
  * @author  Laruence
  * @date    2010-08-01 14:15
@@ -14,7 +14,7 @@ require "Smarty.class.php";
 class Smarty_Adapter implements View_Interface
 {
     /**
-     * smarty object
+     * Smarty object
      * @var Smarty
      */
 

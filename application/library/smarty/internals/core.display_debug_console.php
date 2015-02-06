@@ -1,12 +1,12 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 /**
- * smarty debug_console function plugin
+ * Smarty debug_console function plugin
  *
  * Type:     core<br>
  * Name:     display_debug_console<br>

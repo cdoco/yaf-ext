@@ -1,19 +1,19 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 
 /**
- * smarty {popup_init} function plugin
+ * Smarty {popup_init} function plugin
  *
  * Type:     function<br>
  * Name:     popup_init<br>
  * Purpose:  initialize overlib
- * @link http://smarty.php.net/manual/en/language.function.popup.init.php {popup_init}
- *          (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.function.popup.init.php {popup_init}
+ *          (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param array
  * @param smarty

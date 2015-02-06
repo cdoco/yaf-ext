@@ -1,19 +1,19 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 
 /**
- * smarty count_sentences modifier plugin
+ * Smarty count_sentences modifier plugin
  *
  * Type:     modifier<br>
  * Name:     count_sentences
  * Purpose:  count the number of sentences in a text
- * @link http://smarty.php.net/manual/en/language.modifier.count.paragraphs.php
- *          count_sentences (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.modifier.count.paragraphs.php
+ *          count_sentences (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
  * @return integer

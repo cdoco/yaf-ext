@@ -1,19 +1,19 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 
 /**
- * smarty default modifier plugin
+ * Smarty default modifier plugin
  *
  * Type:     modifier<br>
  * Name:     default<br>
  * Purpose:  designate default value for empty variables
- * @link http://smarty.php.net/manual/en/language.modifier.default.php
- *          default (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.modifier.default.php
+ *          default (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
  * @param string

@@ -1,19 +1,19 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 
 /**
- * smarty regex_replace modifier plugin
+ * Smarty regex_replace modifier plugin
  *
  * Type:     modifier<br>
  * Name:     regex_replace<br>
  * Purpose:  regular expression search/replace
- * @link http://smarty.php.net/manual/en/language.modifier.regex.replace.php
- *          regex_replace (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.modifier.regex.replace.php
+ *          regex_replace (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
  * @param string|array

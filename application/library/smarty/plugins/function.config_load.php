@@ -1,18 +1,18 @@
 <?php
 /**
- * smarty plugin
- * @package smarty
+ * Smarty plugin
+ * @package Smarty
  * @subpackage plugins
  */
 
 /**
- * smarty {config_load} function plugin
+ * Smarty {config_load} function plugin
  *
  * Type:     function<br>
  * Name:     config_load<br>
  * Purpose:  load config file vars
- * @link http://smarty.php.net/manual/en/language.function.config.load.php {config_load}
- *       (smarty online manual)
+ * @link http://Smarty.php.net/manual/en/language.function.config.load.php {config_load}
+ *       (Smarty online manual)
  * @author Monte Ohrt <monte at ohrt dot com>
  * @author messju mohr <messju at lammfellpuschen dot de> (added use of resources)
  * @param array Format:
