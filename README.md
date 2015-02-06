@@ -20,7 +20,7 @@ Cdoco_Yaf_Ext
   Smarty是一个使用PHP写出来的模板引擎，是目前业界最著名的PHP模板引擎之一。
 
 ###6.SwiftMailer
-  Swift Mailer 和前面介绍的PHPMailer一样，也是一个PHP邮件发送类。它不依赖于 PHP 自带的mail() 函数，因为该函数在发送多个邮件时占用的系统资源很高。Swift 直接与 SMTP 服务器通讯，具有非常高的发送速度和效率。
+  Swift Mailer 是一个PHP邮件发送类。它不依赖于 PHP 自带的mail() 函数，因为该函数在发送多个邮件时占用的系统资源很高。Swift 直接与 SMTP 服务器通讯，具有非常高的发送速度和效率。
 
 ###7.EloquentORM 
   Laravel 的 Eloquent ORM 提供了漂亮、简洁的 ActiveRecord 实现来和数据库的互动。 每个数据库表会和一个对应的「模型」互动。
