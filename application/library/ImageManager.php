@@ -1,9 +1,5 @@
 <?php
 
-/**
- * chenzhidong
- * 2013-5-25
- */
 class ImageManager {
 	/**
 	 * 生成缩略图
